@@ -1,14 +1,14 @@
-##Orders Management
+# Orders Management
 
-- Meteor application to manage task and orders of organizations. 
+- Meteor application to manage orders composed by tasks. 
 
 
 
-####Requirements
+# Requirements
 
 - Meteor 1.4 .
 
-####Features
+# Features
 
 - Users
 - Roles
@@ -18,7 +18,7 @@
 - Count down timer for orders
 - Reports
 
-####How to run it 
+# How to run it 
 - Clone the git repository.
 - Run the command "meteor" in the specific folder.
 - Open http://localhost:3000/pedidos in your browser.
@@ -26,7 +26,7 @@
 - This application works with mongodb. First, you need to manually add  a  "admin" role to the new user. Then, you can to create new users and assign them roles by using the application. 
 
 
-####Next change.
+# Next change.
 
 - The application is in Spanish language for the most part. It will be translated into English language.
 
