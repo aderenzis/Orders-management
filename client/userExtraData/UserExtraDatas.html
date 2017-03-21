@@ -1,0 +1,21 @@
+<template name="UserExtraDatas">
+	{{# if isInRole 'admin,userExtraData'}}
+		{{#if $.Session.get 'newUserExtraData'}}
+			{{> NewUserExtraData}}
+		{{else}}
+			<button class="new-recipe">Asociar sectores a usuario</button>
+		{{/if}}
+		<section class="recipes">
+			{{#if Template.subscriptionsReady}}
+				{{#each userExtraDatas}}
+					{{> UserExtraData}}
+				{{/each}}
+			{{else}}
+				<p>Loading</p>
+			{{/if}}
+		</section>
+	{{else}}
+		<h1>Permiso denegado</h1><br>
+		<h3>El inconveniente sera reportado</h3>
+	{{/if}}
+</template> 

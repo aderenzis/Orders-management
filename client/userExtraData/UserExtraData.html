@@ -1,0 +1,12 @@
+<template name="UserExtraData">
+	<article class="recipe  ">
+		<h3>{{user.profile.nombre}}&nbsp; {{user.profile.apellido}}</h3>
+		<i class="fa fa-trash"></i>
+		<i class="fa fa-pencil"></i>
+		{{#if editMode}}
+			{{> quickForm collection="UserExtraDatas" id=updateUserExtraDataId type="update" doc=this autosave=true}}
+		{{else}}
+			<p>{{mail}}</p>
+		{{/if}}
+	</article>
+</template>

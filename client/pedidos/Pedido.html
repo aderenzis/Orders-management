@@ -1,0 +1,30 @@
+<template name="Pedido">
+	<article class="recipe {{#if isFinalizado}}in-menu {{/if}} ">
+		<h3>{{titulo}}</h3>
+		<i class="fa fa-trash"></i>
+		<i class="fa fa-pencil"></i>
+		{{#if editMode}}
+			{{> quickForm collection="Pedidos" id=updatePedidoId type="update" doc=this autosave=true}}
+		{{else}}
+			<p> <i class="fa fa-users"></i> - <label class="text-blue">{{sector.name}}</label></p>
+			<p><textarea disabled="disabled">{{desc}}</textarea></p>
+			<p>
+				{{#each tareas}}
+					<input type="checkbox" class="check-tarea" checked="{{#if isFinalizada}}checked{{/if}}">
+					<label class="lbl-tarea {{#if isFinalizada}}finished{{/if}}">{{titulo}} - {{desc}}</label>
+					{{#if finalizadaPorName}}
+						&nbsp;
+						<label class="text-blue"><i class="glyphicon glyphicon-user"></i>&nbsp;{{finalizadaPorName}}</label>
+					{{/if}}
+					<br>
+				{{/each}}
+			</p>
+			<a href="/recipe/{{_id}}">View Details</a>
+			{{#if isFinalizado}}
+				<button class="btn-deny toggle-menu">Cancelar Finalización</button>
+			{{else}}
+				<button class="btn-primary toggle-menu">Finalizar Pedido</button>
+			{{/if}}
+		{{/if}}
+	</article>
+</template>

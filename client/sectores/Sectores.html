@@ -1,0 +1,16 @@
+<template name="Sectores">
+	{{#if $.Session.get 'newSector'}}
+		{{> NewSector}}
+	{{else}}
+		<button class="new-recipe">Nuevo Sector</button>
+	{{/if}}
+	<section class="recipes">
+		{{#if Template.subscriptionsReady}}
+			{{#each sectores}}
+				{{> Sector}}
+			{{/each}}
+		{{else}}
+			<p>Loading</p>
+		{{/if}}
+	</section>
+</template> 

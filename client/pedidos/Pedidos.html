@@ -1,0 +1,18 @@
+<template name="Pedidos">
+	{{#if $.Session.get 'newPedido'}}
+		{{> NewPedido}}
+	{{else}}
+		<button class="new-recipe">
+			 <i class="glyphicon glyphicon-plus"></i>
+		</button>
+	{{/if}}
+	<section class="recipes">
+		{{#if Template.subscriptionsReady}}
+			{{#each pedidos}}
+				{{> Pedido}}
+			{{/each}}
+		{{else}}
+			<p>Loading</p>
+		{{/if}}
+	</section>
+</template> 

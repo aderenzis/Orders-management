@@ -1,0 +1,14 @@
+<template name="SideNav">
+	<nav class="side-nav">
+		<ul>
+			<li><a href="/pedidos"><i class="fa fa-list"></i>	Lista de Pedidos</a></li>
+			<li><a href="/sectores"><i class="fa fa-users"></i>Sectores</a></li>
+			{{# if isInRole 'admin,userExtraData'}}
+				<li><a href="/userExtraDatas"><i class="fa fa-address-book-o"></i>Sectores de usuarios</a></li>
+			{{/if}}
+			{{# if isInRole 'admin,userExtraData'}}
+				<li><a href="/reports"><i class="fa fa-file-pdf-o"></i>Reportes</a></li>
+			{{/if}}
+		</ul>
+	</nav>
+</template>

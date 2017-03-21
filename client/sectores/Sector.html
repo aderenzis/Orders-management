@@ -1,0 +1,12 @@
+<template name="Sector">
+	<article class="recipe  ">
+		<h3>{{name}}</h3>
+		<i class="fa fa-trash"></i>
+		<i class="fa fa-pencil"></i>
+		{{#if editMode}}
+			{{> quickForm collection="Sectores" id=updateSectorId type="update" doc=this autosave=true}}
+		{{else}}
+			<p>{{desc}}</p>
+		{{/if}}
+	</article>
+</template>
