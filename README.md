@@ -26,7 +26,7 @@
 - This application works with mongodb. First, you need to manually add  a  "admin" role to the new user. Then, you can to create new users and assign them roles by using the application. 
 
 
-# Next feature.
+# Next features.
 
 - The application is in Spanish language for the most part. It will be translated into English language.
 
